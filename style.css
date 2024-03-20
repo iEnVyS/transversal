@@ -20,13 +20,13 @@ a {
     color: var(--color-blue);
 }
 
-.hero{
+.video_background{
     background: linear-gradient(rgba(0, 0, 0, 0.1), var(--color-background));
     position: relative;
     min-height: 100vh;
 }
 
-.hero__background{
+.background{
     object-fit: cover;
     height: 100vh;
     width: 100%;
@@ -35,18 +35,18 @@ a {
     z-index: -10;
 }
 
-.hero__foreground{
+.foreground{
     color: var(--color-white);
     text-align: center;
     padding-top: 40vh;
 }
 
-.hero__title{
+.title_text{
     font-size: 5rem;
-    font-weight: 300;
+    font-weight: 300px;
 }
 
-.hero__text{
+.secondary_title{
     margin-top: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
@@ -54,7 +54,7 @@ a {
 
 .section {
     overflow: hidden;
-    padding: 0 8rem;
+    padding: 0 4%;
     text-align: center;
 }
 
@@ -72,18 +72,17 @@ a {
     border-radius: .75rem;
     box-shadow: 0 1rem 2rem -0.5rem rgba(20, 116, 180 , 0.25);
     object-fit: cover;
-    object-position: bottom;
+    object-position: middle;
     position: relative;
-    max-height: 50rem;
+    max-height: 30rem;
 }
-
-
 
 .section__text,
 .section__text-inline{
     font-size: 1.25rem;
     line-height: 1.75;
-    margin: 4rem auto;    
+    margin: 4rem auto;
+    text-align: justify;
 }
 
 .section__img-inline{
@@ -91,15 +90,14 @@ a {
     border-bottom-right-radius: 4rem;
     float: left;
     height: 25rem;
-    width: 17.2rem;
+    width: 20rem;
     margin-right: 4rem;
     margin-bottom: 2rem;
-    object-position: middle;
 }
 
 .section__text-inline{
-    margin-top:6rem;
-    text-align: left;
+    margin-top: 4rem;
+    text-align: justify;
 
 }
 
@@ -160,4 +158,41 @@ footer{
 
 footer > img{
     height: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        padding: 0 3%;
+    }
+
+    .hero__title {
+        font-size: 4rem;
+    }
+
+    .section__title {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .section {
+        padding: 0 2%;
+    }
+
+    .hero__title {
+        font-size: 3rem;
+    }
+
+    .section__title {
+        font-size: 2rem;
+    }
+
+    .section__img-inline {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .section__text-inline {
+        margin-top: 2rem;
+    }
 }
